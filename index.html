@@ -9,26 +9,23 @@
 <body>
     <div class="main">
         <div class="menu">
-            <button class="color picker">
+            <button class="picker color">
                 color picker
             </button>
-            <button class="thickness picker">
-                thickness picker
-            </button>
-            <button class="eraser">
+            <button class="picker eraser" id="eraserbutton">
                 eraser
             </button>
-            <button class="clear" id="clearbutton">
+            <button class="picker clear" id="clearbutton">
                 clear
             </button>
+            <div class="slider" id="sizeslider">
+                <input type="range" min="1" max="5" value="3" class="picker slider" id="myRange">
+            </div>
         </div>
         <div class="grid" id="container">
-
         </div>
     </div>
-    <div class="slider" id="sizeslider">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div>
+    
 </body>
 <script src="script.js"></script>
 

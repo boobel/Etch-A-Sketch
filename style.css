@@ -11,13 +11,13 @@ body {
 .main {
     display: flex;
     flex-direction: row;
-
 }
 
 .grid {
     display: grid;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    
 }
 
 
@@ -25,8 +25,14 @@ body {
     display: flex;
     flex-direction: column;
     margin: 16px;
+    margin-right: 64px;
    
 }
+
+.picker {
+    margin: 12px;
+}
+
 
 :root {
     --grid-cols: 1;
@@ -35,12 +41,12 @@ body {
   
   #container {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 0fr);
+    grid-template-columns: repeat(var(--grid-cols), 0fr);
   }
   
   .grid-item {
     padding: 1em;
     border: 1px solid #ddd;
-    text-align: center;
+    padding-bottom: 1em;
   }
