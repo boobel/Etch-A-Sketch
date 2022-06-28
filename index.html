@@ -10,9 +10,8 @@
 <body>
     <div class="main">
         <div class="menu">
-            <button class="picker color">
-                color picker
-            </button>
+            <input class="picker color" type="color" value="#333333" id="color">
+            </input>
             <button class="picker eraser" id="eraserbutton">
                 eraser
             </button>
@@ -20,7 +19,7 @@
                 clear
             </button>
             <div class="slider" id="sizeslider">
-                <input type="range" min="1" max="12" value="6" class="picker slider" id="myRange">
+                <input type="range" min="1" max="64" value="6" class="picker slider" id="myRange">
                 <p class = "display"><span id="demo"> </span></p>
             </div>
         </div>

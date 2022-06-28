@@ -18,32 +18,79 @@ body {
 
 .main {
     display: flex;
+
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.grid {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+button {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ffffff;
+	border-radius:1px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
 }
+button:active {
+    position:relative;
+	top:1px;
+}
+
 
 
 .menu {
     display: flex;
+
     flex-direction: column;
     margin: 16px;
     margin-right: 64px;
-   
+
+}
+
+.color.picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    border-radius:1px;
+	border:1px solid #000000;
+    color:#000000
 }
 
 .picker {
     margin: 12px;
 }
+
 .picker.slider {
     margin-bottom: 4px;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 85%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #ffffff; /* Grey background */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 1px;
+    border: 1px solid #000000;
 }
+
+.picker.slider::-webkit-slider-thumb{
+    accent-color: #F55050;
+}
+
+ .picker.picker.slider::-webkit-range-thumb {
+    background: black;
+
+ }
 
 .display {
     align-items: center;
@@ -52,23 +99,33 @@ body {
     margin: 4px;
 }
 
+.picker.eraser.selected {
+    position: relative;
+    top: 1px;
+}
+
 
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-  }
-  
-  #container {
+    --grid-height: 50px;
+}
+
+#container {
+
+    margin-top: 25px;
+    margin-right: 40px;
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 0fr);
-    grid-template-columns: repeat(var(--grid-cols), 0fr);
-  }
-  
-  .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
-    justify-content: center;
-    align-items: center;
-    size: inherit;
-    
-  }
+    grid-template-columns: repeat(var(--grid-rows), 2fr);
+    grid-template-rows: repeat(var(--grid-rows), 2fr);
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
+}
+
+.grid-item {
+    height: 1000x*var(--grid-height);
+    border: 1px solid black;
+
+}
