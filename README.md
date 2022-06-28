@@ -1,4 +1,5 @@
 # Etch-A-Sketch
 
 Etch-A-Sketch website
-Link: github.io/boobel/Etch-A-Sketch
+
+Link: https://boobel.github.io/Etch-A-Sketch/
